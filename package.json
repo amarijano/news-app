@@ -1,0 +1,19 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "description": "Full-stack news application",
+  "scripts": {
+    "install": "cd client && npm install && cd ../server && npm install",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "npm run dev --prefix client",
+    "start:server": "npm run start:dev --prefix server",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "test": "npm run test --prefix client && npm run test --prefix server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
